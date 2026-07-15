@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# Generated audit outputs
+*_test.json
+verify_*.json
+verify_*.csv
+verify_wordlist.txt
+analysis_test.csv
+audit_report.json
+defensive_audit_report.json
+simulation_test.json
+hash_inventory_test.json
+replay_test.json
+crack_*_test.json
+my_dictionary.txt
+wordlist.txt
+hashes.json
+hives.json
+simulation.json
+report.json
+final-audit-report.json
+crack-results.json
+replay-results.json
+
+# Local external tools and exported hives
+lab-hives/
+SAM
+SYSTEM
+*.hive
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Password Cracking and Credential Attack Suite</title>
+    <meta name="description" content="Ethical password policy testing and credential security assessment toolkit for controlled lab environments.">
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #f7f7f4;
+        --text: #202124;
+        --muted: #5f6368;
+        --panel: #ffffff;
+        --line: #d9d9d4;
+        --accent: #0f766e;
+        --accent-2: #8b5cf6;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #111315;
+          --text: #f2f3f3;
+          --muted: #b4b8bd;
+          --panel: #1a1d20;
+          --line: #30343a;
+        }
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.55;
+      }
+      main {
+        width: min(1080px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 48px 0;
+      }
+      header {
+        padding: 28px 0 24px;
+        border-bottom: 1px solid var(--line);
+      }
+      h1 {
+        max-width: 850px;
+        margin: 0;
+        font-size: clamp(2rem, 5vw, 4.25rem);
+        line-height: 1.05;
+      }
+      .lead {
+        max-width: 760px;
+        margin: 18px 0 0;
+        color: var(--muted);
+        font-size: 1.1rem;
+      }
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 24px;
+      }
+      a.button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 42px;
+        padding: 0 16px;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        color: var(--text);
+        text-decoration: none;
+        background: var(--panel);
+      }
+      a.button.primary {
+        background: var(--accent);
+        color: white;
+        border-color: var(--accent);
+      }
+      section {
+        padding: 28px 0;
+        border-bottom: 1px solid var(--line);
+      }
+      h2 {
+        margin: 0 0 14px;
+        font-size: 1.35rem;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 14px;
+      }
+      .card {
+        min-height: 132px;
+        padding: 18px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel);
+      }
+      .card h3 {
+        margin: 0 0 8px;
+        font-size: 1rem;
+      }
+      .card p {
+        margin: 0;
+        color: var(--muted);
+      }
+      code {
+        display: block;
+        overflow-x: auto;
+        padding: 14px;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        background: var(--panel);
+        color: var(--text);
+      }
+      footer {
+        padding: 24px 0 0;
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Password Cracking and Credential Attack Suite</h1>
+        <p class="lead">A Python toolkit for ethical password policy testing, credential security assessment, and controlled lab demonstrations.</p>
+        <div class="actions">
+          <a class="button primary" href="https://github.com/" rel="noreferrer">View on GitHub</a>
+          <a class="button" href="#usage">Quick Start</a>
+        </div>
+      </header>
+
+      <section>
+        <h2>Toolkit Scope</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Dictionary Generator</h3>
+            <p>Builds custom wordlists with names, dates, keyboard patterns, common passwords, and mutations.</p>
+          </article>
+          <article class="card">
+            <h3>Hash Inventory</h3>
+            <p>Parses Linux shadow-style files and checks offline Windows SAM/SYSTEM hive availability.</p>
+          </article>
+          <article class="card">
+            <h3>Brute-Force Simulation</h3>
+            <p>Estimates keyspace and time-to-crack for lowercase, uppercase, digit, and symbol modes.</p>
+          </article>
+          <article class="card">
+            <h3>Password Analysis</h3>
+            <p>Measures complexity, entropy, predictability, severity, and recommended improvements.</p>
+          </article>
+          <article class="card">
+            <h3>Red Lab</h3>
+            <p>Runs offline dictionary/mask cracking and local credential replay against explicit fixtures.</p>
+          </article>
+          <article class="card">
+            <h3>Audit Reports</h3>
+            <p>Generates JSON reports with risks, weak password summaries, simulations, and policy guidance.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="usage">
+        <h2>Quick Start</h2>
+        <code>pip install -r requirements.txt
+python main.py --help
+python main.py optional-tools status
+python main.py report --password "Password123" -o report.json</code>
+      </section>
+
+      <section>
+        <h2>Ethical Use</h2>
+        <p>Use this project only on systems, files, and passwords you own or have explicit authorization to test. The hosted page is documentation only; the CLI and optional tools run locally in controlled lab environments.</p>
+      </section>
+
+      <footer>
+        <p>Built for practical password policy testing and credential security education.</p>
+      </footer>
+    </main>
+  </body>
+</html>
