@@ -1,0 +1,21 @@
+# Vercel hosts only the static project page.
+# The Python toolkit is intended to run locally in an authorized lab.
+main.py
+password_suite.py
+requirements.txt
+modules/
+
+# Lab fixtures and generated artifacts are not needed on Vercel.
+lab-*.txt
+*.json
+*.csv
+*.hive
+SAM
+SYSTEM
+lab-hives/
+
+# Local/editor files
+.git/
+.agents/
+__pycache__/
+*.pyc
